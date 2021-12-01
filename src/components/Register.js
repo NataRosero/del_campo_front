@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
+import { useNavigate } from "react-router";
 import "./Components.css";
 
 const Register = () => {
   //Crear contexto de tipo AuthContext
-  const {handleRegister} = useContext(AuthContext);
+  const { handleRegister } = useContext(AuthContext);
 
   const objForm = {
     name: "",

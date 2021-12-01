@@ -1,11 +1,15 @@
 import React from "react";
-import Catalogue from "../../components/Catalogue";
-import { ProductProvider } from "../../context/ProductContext";
-import { Carousel, Button } from "react-bootstrap";
-import slider_1 from "../../assets/slider_1.jpeg";
-import slider_2 from "../../assets/slider_2.jpg";
+// import Catalogue from "../../components/Catalogue";
+// import { ProductProvider } from "../../context/ProductContext";
+// import { Carousel, Button } from "react-bootstrap";
+// import slider_1 from "../../assets/slider_1.jpeg";
+// import slider_2 from "../../assets/slider_2.jpg";
 import { useNavigate } from "react-router";
-import { ShopProvider } from "../../context/ShopContext";
+//import { ShopProvider } from "../../context/ShopContext";
+import Banner from '../../components/Banner'
+import Barra from '../../components/Barra'
+import Categoria from '../../components/Categoria'
+import Footer from '../../components/Footer'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,7 +20,14 @@ const Home = () => {
 
   return (
     <div>
-      {/*********Carusel de imágenes**********/}
+      <Banner />
+      <br />
+      <Barra />
+      <br />
+      <Categoria />
+      <br />
+      <Footer />
+      {/*********Carusel de imágenes*********
       <Carousel>
         <Carousel.Item>
           <img
@@ -52,12 +63,12 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      {/*********Llamar el catalogo con su respectivo contexto*****/}
+      {/*********Llamar el catalogo con su respectivo contexto****
       <ProductProvider>
         <ShopProvider>
           <Catalogue />
         </ShopProvider>
-      </ProductProvider>
+      </ProductProvider>*/}
     </div>
   );
 };
