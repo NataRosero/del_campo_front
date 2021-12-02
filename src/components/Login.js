@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import {Form, Button} from "react-bootstrap";
 import { useNavigate } from "react-router";
 import AuthContext from "../context/AuthContext";
+import logo from "../logo.svg";
+import Swal from 'sweetalert2'
 
 const objForm = {
   email: "",
@@ -30,7 +32,7 @@ const Login = () => {
         localStorage.setItem('token', token);
         navigate('/');
       }else{
-        alert('Invalid credentials');
+        Swal.fire("¡Hola!", "Tu usuario o contraseña no coincide", "error");
       }
     }).catch(error=>{
       console.log(error);
@@ -39,20 +41,28 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h2>Login</h2>
+        <br/>
+        <img className="logo" src={logo}/>
+        <br/>
+        <br/>
+        <br/>
+      <h3>Iniciar Sesión</h3>
+      <br/>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="loginEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control required value={form.email} onChange={handleForm} name="email" type="email" placeholder="Enter email" />
+          <Form.Control required value={form.email} onChange={handleForm} name="email" type="email" placeholder="Correo electrónico"/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="loginPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Password" />
+          <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Contraseña" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Enter
+        <Button variant="light" type="submit" className="BotonS">
+        Registrarme
+        </Button>
+
+        <Button variant="primary" type="submit" className="Boton">
+        Iniciar Sesión
         </Button>
       </Form>
     </div>

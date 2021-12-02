@@ -1,19 +1,52 @@
 .register{
-    border: 1px solid black; 
     margin: 50px;
     padding: 10px;
-    border-radius: 25%;
+    max-width: 60%;
+    align-content: center !important;
+    justify-content: center !important;
+    margin:0 auto;
+    /* font-family: Roboto !important; */
+    color: rgb(12, 65, 12);
 }
 
 .login{
-    border: 1px solid black; 
     margin: 50px;
     padding: 10px;
-    border-radius: 20% 0% 20% 0%;
+    max-width: 40%;
+    align-content: center !important;
+    margin: 0 auto;
+    /* font-family: Roboto !important; */
+    color: rgb(12, 65, 12) !important;
+}
+.Boton{
+    background-color: rgb(141, 158, 141) !important;
+    background: rgb(9, 65, 9) !important;
+    border: none !important;
+    margin: 15px !important;
+}
+.Boton:hover{
+    background-color: rgb(141, 158, 141) !important;
+    background: rgb(24, 126, 24) !important;
+    border: none;
+}
+
+.BotonS{
+    background: rgb(186, 186, 186) !important;
+    border: none !important;
+    margin: 15px !important;
+}
+.BotonS:hover{
+    background: rgb(200, 247, 200) !important;
+    border: none;
+}
+
+.logo{
+    max-width: 50% ;
+    align-content: center;
 }
 
 .contCard{
-    display: grid;
+    display: flexbox;
     grid-template-columns: repeat(4, 1fr);
 }
 
