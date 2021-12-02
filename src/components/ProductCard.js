@@ -24,14 +24,14 @@ const ProductCard = ({ objProduct, edit, handleCart }) => {
           {edit ? (
             <>
               <Button variant="warning" onClick={handleShow}>
-                Edit
+                Editar
               </Button>
               &nbsp;
               <Button
                 variant="danger"
                 onClick={() => handleDelete(objProduct._id)}
               >
-                Delete
+                Eliminar
               </Button>
             </>
           )

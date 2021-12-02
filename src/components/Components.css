@@ -45,11 +45,17 @@
     align-content: center;
 }
 
-.contCard{
-    display: flexbox;
-    grid-template-columns: repeat(4, 1fr);
+.contCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgb(181, 195, 34);
+  background: linear-gradient(
+    58deg,
+    rgba(181, 195, 34, 1) 45%,
+    rgba(253, 219, 45, 1) 60%
+  );
 }
 
-.card{
-    margin: 4px;
+.card {
+  margin: 4px;
 }
