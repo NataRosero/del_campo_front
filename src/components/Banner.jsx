@@ -10,11 +10,11 @@ const Ban = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        navigate("/auth");
+        navigate("/home");
     };
 
     const handleRegister = () => {
-        navigate("/reg");
+        navigate("/");
     };
 
     return (
@@ -25,10 +25,10 @@ const Ban = () => {
                     {/* <ProgressBar variant="success" now={40} /> */}
                     <Nav.Item>
                         <ButtonGroup aria-label="Basic example">
-                            <Link to="./Login.js">
+                            <Link to="/auth">
                                 <Button variant="outline-success" onClick={handleLogin}>Inicio de Sesion</Button>
                             </Link>
-                            <Link to="/Register.js">
+                            <Link to="./Register">
                                 <Button variant="outline-success" onClick={handleRegister}>Registro</Button>
                             </Link>
                         </ButtonGroup>

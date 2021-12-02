@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import AuthContext from "../context/AuthContext";
+import Logo from "../assets/logo_Delcampo_C.png";
 
 const objForm = {
   email: "",
@@ -28,7 +29,7 @@ const Login = () => {
         let json = await resp.json();
         let token = json.token;
         localStorage.setItem('token', token);
-        navigate('/');
+        navigate('/login');
       } else {
         alert('Invalid credentials');
       }
@@ -38,27 +39,10 @@ const Login = () => {
   }
 
   return (
-    // <div className="login">
-    //   <h2>Login</h2>
-    //   <Form onSubmit={handleSubmit}>
-    //     <Form.Group className="mb-3" controlId="loginEmail">
-    //       <Form.Label>Email address</Form.Label>
-    //       <Form.Control required value={form.email} onChange={handleForm} name="email" type="email" placeholder="Enter email" />
-    //     </Form.Group>
-
-    //     <Form.Group className="mb-3" controlId="loginPassword">
-    //       <Form.Label>Password</Form.Label>
-    //       <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Password" />
-    //     </Form.Group>
-
-    //     <Button variant="primary" type="submit">
-    //       Enter
-    //     </Button>
-    //   </Form>
 
     <div className="login">
       <br />
-      <img className="logo" src={logo} />
+      <img className="logo" src={Logo} />
       <br />
       <br />
       <br />
@@ -79,8 +63,6 @@ const Login = () => {
           Iniciar Sesión
         </Button>
       </Form>
-
-
 
     </div>
   );

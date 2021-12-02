@@ -4,7 +4,7 @@ import React from "react";
 // import { Carousel, Button } from "react-bootstrap";
 // import slider_1 from "../../assets/slider_1.jpeg";
 // import slider_2 from "../../assets/slider_2.jpg";
-import { useNavigate } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 //import { ShopProvider } from "../../context/ShopContext";
 import Banner from '../../components/Banner'
 import Barra from '../../components/Barra'
@@ -69,6 +69,7 @@ const Home = () => {
           <Catalogue />
         </ShopProvider>
       </ProductProvider>*/}
+      <Outlet />
     </div>
   );
 };
