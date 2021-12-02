@@ -13,6 +13,9 @@ const Home = () => {
   const handleLogin = () => {
     navigate("/auth");
   };
+  const handleRegister = () => {
+    navigate("/Register");
+  };
 
   return (
     <div>
@@ -48,6 +51,9 @@ const Home = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <Button variant="success" onClick={handleLogin}>
               Login
+            </Button>
+            <Button variant="success" onClick={handleRegister}>
+              Register
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
