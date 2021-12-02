@@ -6,7 +6,7 @@ export default function barra() {
 
     return (
         <>
-            <Navbar variant="light" bg="success" expand="md">
+            <Navbar variant="light" bg="success">
                 <Container fluid>
 
                     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -24,7 +24,7 @@ export default function barra() {
                             <FormControl
                                 type="search"
                                 placeholder="Buscar"
-                                className="me-2"
+                                className="me-1"
                                 aria-label="Search"
                             />
                             <Button variant="success"> 🔎 </Button>

@@ -4,7 +4,8 @@ import AuthContext from "../context/AuthContext";
 import { useNavigate } from "react-router";
 import "./Components.css";
 import logo from "../logo.svg";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   //Crear contexto de tipo AuthContext
@@ -14,10 +15,10 @@ const Register = () => {
     name: "",
     lastname: "",
     nickname: "",
-    kindId:"",
-    id:"",
-    tel:"",
-    address:"",
+    kindId: "",
+    id: "",
+    tel: "",
+    address: "",
     email: "",
     password: "",
   };
@@ -38,13 +39,15 @@ const Register = () => {
 
   return (
     <div className="register">
-      <br/>
-        <img className="logo" src={logo}/>
-        <br/>
-        <br/>
-        <br/>
+      <br />
+      <Link to="/">
+        <img className="logo" src={logo} />
+      </Link>
+      <br />
+      <br />
+      <br />
       <h2>Regístrate</h2>
-      <br/>
+      <br />
       {/**Formulario de registro**/}
       <Form onSubmit={handleSubmit}>
         <Row>

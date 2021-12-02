@@ -3,7 +3,10 @@ import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import AuthContext from "../context/AuthContext";
 import logo from "../logo.svg";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
+
+
 
 const objForm = {
   email: "",
@@ -11,13 +14,16 @@ const objForm = {
 }
 
 const Login = () => {
+
+  const handleRegister = () => {
+    navigate("/Register");
+  };
   //Contexto
   const { handleLogin } = useContext(AuthContext);
   //Estados
   const [form, setForm] = useState(objForm);
   //Navegador
   const navigate = useNavigate();
-
 
   const handleForm = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -43,7 +49,9 @@ const Login = () => {
 
     <div className="login">
       <br />
-      <img className="logo" src={logo} />
+      <Link to="/">
+        <img className="logo" src={logo} />
+      </Link>
       <br />
       <br />
       <br />
@@ -58,7 +66,7 @@ const Login = () => {
           <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Contraseña" />
         </Form.Group>
 
-        <Button variant="light" type="submit" className="BotonS">
+        <Button variant="light" type="submit" className="BotonS" onClick={handleRegister}>
           Registrarme
         </Button>
 

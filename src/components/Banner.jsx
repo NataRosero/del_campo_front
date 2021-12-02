@@ -5,6 +5,7 @@ import LogoCampo from '../assets/logo_Delcampo_C.png';
 import { Container, ButtonGroup, Button, Nav } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom'
+import "./Components.css"
 
 const Ban = () => {
     const navigate = useNavigate();
@@ -21,15 +22,17 @@ const Ban = () => {
         <>
             <Navbar bg="light" expand={false}>
                 <Container fluid>
-                    <img src={LogoCampo} align="left" width="25%" height="20%" />
+                    <Link to="/">
+                        <img src={LogoCampo} align="left" width="40%" height="20%" />
+                    </Link>
                     {/* <ProgressBar variant="success" now={40} /> */}
                     <Nav.Item>
                         <ButtonGroup aria-label="Basic example">
                             <Link to="/auth">
-                                <Button variant="outline-success" onClick={handleLogin}>Inicio de Sesion</Button>
+                                <Button variant="outline-success" onClick={handleLogin} className="btn1">Inicio de Sesion</Button>
                             </Link>
                             <Link to="./Register">
-                                <Button variant="outline-success" onClick={handleRegister}>Registro</Button>
+                                <Button variant="outline-success" onClick={handleRegister} className="btn1">Registro</Button>
                             </Link>
                         </ButtonGroup>
                     </Nav.Item>

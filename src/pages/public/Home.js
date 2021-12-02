@@ -10,6 +10,8 @@ import Banner from '../../components/Banner'
 import Barra from '../../components/Barra'
 import Categoria from '../../components/Categoria'
 import Footer from '../../components/Footer'
+import Catalogue from '../../components/Catalogue'
+import Dashboard from "../private/Dashboard";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -24,57 +26,14 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <br />
-      <Barra />
+      <Dashboard />
       <br />
       <Categoria />
       <br />
+      {/* <Catalogue /> */}
+      <br />
       <Footer />
-      {/*********Carusel de imágenes*********
-      <Carousel>
-        <Carousel.Item>
-          <img
-            height="400px"
-            width="100vm"
-            className="d-block w-100"
-            src={slider_1}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <Button variant="success" onClick={handleLogin}>
-              Login
-            </Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            height="400px"
-            width="100vm"
-            className="d-block w-100"
-            src={slider_2}
-            alt="Second slide"
-          />
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <Button variant="success" onClick={handleLogin}>
-              Login
-            </Button>
-            <Button variant="success" onClick={handleRegister}>
-              Register
-            </Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-      {/*********Llamar el catalogo con su respectivo contexto****
-      <ProductProvider>
-        <ShopProvider>
-          <Catalogue />
-        </ShopProvider>
-      </ProductProvider>*/}
       <Outlet />
     </div>
   );
