@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import AuthContext from "../context/AuthContext";
-import Logo from "../assets/logo_Delcampo_C.png";
+import logo from "../logo.svg";
+import Swal from 'sweetalert2'
 
 const objForm = {
   email: "",
@@ -29,9 +30,9 @@ const Login = () => {
         let json = await resp.json();
         let token = json.token;
         localStorage.setItem('token', token);
-        navigate('/login');
+        navigate('/');
       } else {
-        alert('Invalid credentials');
+        Swal.fire("¡Hola!", "Tu usuario o contraseña no coincide", "error");
       }
     }).catch(error => {
       console.log(error);
@@ -42,7 +43,7 @@ const Login = () => {
 
     <div className="login">
       <br />
-      <img className="logo" src={Logo} />
+      <img className="logo" src={logo} />
       <br />
       <br />
       <br />
@@ -56,9 +57,11 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="loginPassword">
           <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Contraseña" />
         </Form.Group>
+
         <Button variant="light" type="submit" className="BotonS">
           Registrarme
         </Button>
+
         <Button variant="primary" type="submit" className="Boton">
           Iniciar Sesión
         </Button>

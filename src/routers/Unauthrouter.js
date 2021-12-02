@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router';
 import Auth from '../pages/public/Auth';
 import Home from '../pages/public/Home';
-import AuthRegister from '../pages/public/AuthRegister';
+import AuthRegister from '../pages/public/AuthRegister'
 
 const Unauthrouter = () => {
     return (
