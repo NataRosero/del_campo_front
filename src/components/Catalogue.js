@@ -21,8 +21,8 @@ const Catalogue = () => {
 
     return (
         <div>
-            <h2>Catalogue</h2>
-            <Button onClick={viewCart}>Cart</Button>
+            <h2>Catálogo</h2>
+            <Button onClick={viewCart}>Mi Carrito</Button>
             <div className="contCard">
                 {catalogue.map(e=><ProductCard key={e._id} edit={false} objProduct={e} handleCart={handleCart}/>)}
             </div>
