@@ -7,6 +7,9 @@ import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider } from "./context/AuthContext";
 
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
