@@ -1,7 +1,7 @@
 .register {
   margin: 50px;
   padding: 10px;
-  max-width: 60%;
+  max-width: 50%;
   align-content: center !important;
   justify-content: center !important;
   margin: 0 auto;
@@ -12,7 +12,7 @@
 .login {
   margin: 50px;
   padding: 10px;
-  max-width: 40%;
+  max-width: 50%;
   align-content: center !important;
   margin: 0 auto;
   /* font-family: Roboto !important; */
@@ -41,7 +41,7 @@
 }
 
 .logo {
-  max-width: 50%;
+  max-width: 40%;
   align-content: center;
 }
 
@@ -72,6 +72,7 @@
 .barra {
   background-color: rgb(3, 31, 14) !important;
   font-weight: 500;
+  font-size: 25px;
   display: flex !important;
   justify-content: space-between !important;
 }

@@ -5,6 +5,9 @@ import AuthContext from "../context/AuthContext";
 import logo from "../logo.svg";
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import DashboardLogin from "../pages/private/DashboardLogin.js";
+import Footer from './Footer';
 
 
 
@@ -46,36 +49,67 @@ const Login = () => {
   }
 
   return (
-
-    <div className="login">
-      <br />
-      <Link to="/">
-        <img className="logo" src={logo} />
-      </Link>
+    <>
+      <DashboardLogin />
       <br />
       <br />
       <br />
-      <h3>Iniciar Sesión</h3>
       <br />
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="loginEmail">
-          <Form.Control required value={form.email} onChange={handleForm} name="email" type="email" placeholder="Correo electrónico" />
-        </Form.Group>
+      <br />
 
-        <Form.Group className="mb-3" controlId="loginPassword">
-          <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Contraseña" />
-        </Form.Group>
+      <div className="login">
+        <br />
+        <Link to="/">
+          <img className="logo" src={logo} />
+        </Link>
+        <br />
+        <br />
+        <br />
+        <h3>Iniciar Sesión</h3>
+        <br />
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="loginEmail">
+            <Form.Control required value={form.email} onChange={handleForm} name="email" type="email" placeholder="Correo electrónico" />
+          </Form.Group>
 
-        <Button variant="light" type="submit" className="BotonS" onClick={handleRegister}>
-          Registrarme
-        </Button>
+          <Form.Group className="mb-3" controlId="loginPassword">
+            <Form.Control required value={form.password} onChange={handleForm} name="password" type="password" placeholder="Contraseña" />
+          </Form.Group>
 
-        <Button variant="primary" type="submit" className="Boton">
-          Iniciar Sesión
-        </Button>
-      </Form>
+          <Button variant="light" type="submit" className="BotonS" onClick={handleRegister}>
+            Registrarme
+          </Button>
 
-    </div>
+          <Button variant="primary" type="submit" className="Boton">
+            Iniciar Sesión
+          </Button>
+        </Form>
+
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Footer />
+    </>
   );
 };
 
